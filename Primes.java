@@ -1,3 +1,5 @@
+
+
 public class Primes {
     public static void main(String[] args) {
         int n = Integer.parseInt(args[0]);
@@ -9,6 +11,7 @@ public class Primes {
         }
         int counter = 0;
         int index = 2;
+        System.out.println("Prime numbers up to " + n + ":");
         while (index < Math.sqrt(n)){
             for (int j = index; j < arr.length; j++){
                 if (j % index == 0 && j != index){
