@@ -29,10 +29,15 @@ public class TesterMyString {
         boolean test3 = !MyString.contains("baba yaga", "John Wick is the baba yaga");
         boolean test4 = !MyString.contains("baba yaga", "Yaga");
         boolean test5 = !MyString.contains("baba yaga", "babayaga");
+        System.out.println(test1);
+        System.out.println(test2);
+        System.out.println(test3);
+        System.out.println(test4);
+        System.out.println(test5);
 
 
-        int passed = (test1 ? 1 : 0) + (test2 ? 1 : 0) + (test3 ? 1 : 0) + (test4 ? 1 : 0) +
-                     (test5 ? 1 : 0);
+        int passed =  (test1 ? 1 : 0) + (test2 ? 1 : 0)  + (test3 ? 1 : 0) +
+        + (test4 ? 1 : 0) +  (test5 ? 1 : 0);
         String verdict = passed == num_tests ? "(Passed)": "Failed";
 
         System.out.println("Passed " + passed + "/" + num_tests + " tests " + verdict);

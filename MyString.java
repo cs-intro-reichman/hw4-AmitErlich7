@@ -37,20 +37,24 @@ public class MyString {
 
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
-        if (str1.length() < str2.length()){
-            return false;
+        if (str2.isEmpty()) {
+            return true;
         }
-        for (int i = 0; i < str2.length(); i++){
-            boolean exist = false;
-            for (int j = 0; j < str1.length(); j++){
-                if (str1.charAt(j) == str2.charAt(i)) {
-                    exist = true;
+        for (int i = 0; i < str1.length() - str2.length(); i++){
+            boolean exist = true;
+            int index = i;
+            for (int j = 0; j < str2.length(); j++){
+                if (str1.charAt(index) != str2.charAt(j)) {
+                    exist = false;
+                }
+                else{ 
+                    index++;
                 }
             }
-            if (exist == false){
-                return false;
+            if (exist){
+                return true;
             }
         }
-        return true;
+        return false;
     }
 }
