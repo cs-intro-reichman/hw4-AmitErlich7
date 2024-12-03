@@ -26,12 +26,16 @@ public class KeywordsDetector {
         }
         for (int i = 0 ; i < sentences.length; i++) {
             sentences[i] = MyString.lowerCase(sentences[i]);
-            for (int j = 0; j < keywords.length; j++) {
-                if (MyString.contains(keywords[j], sentences[i])){
+            int j = 0;
+            while (j < keywords.length) {
+                if (MyString.contains(keywords[j], sentences[i])) {
                     System.out.println(sentences[i]);
-                    break;
+                    j = keywords.length-1;
                 }
-             }   
+                else{
+                    j++;
+                }
+            }   
             }
             
         }
