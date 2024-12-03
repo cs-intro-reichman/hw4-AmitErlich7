@@ -30,7 +30,7 @@ public class KeywordsDetector {
             while (j < keywords.length) {
                 if (MyString.contains(keywords[j], sentences[i])) {
                     System.out.println(sentences[i]);
-                    j = keywords.length-1;
+                    j = keywords.length;
                 }
                 else{
                     j++;
