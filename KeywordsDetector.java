@@ -22,12 +22,13 @@ public class KeywordsDetector {
     // If a sentence contains one or more of the kewords, prints it.
     public static void detectAndPrint(String[] sentences, String[] keywords) {
         int i = 0;
+        String [] lowerSentences = new String [sentences.length];
         while (i < sentences.length) {
-            sentences[i] = MyString.lowerCase(sentences[i]);
+            lowerSentences[i] = MyString.lowerCase(sentences[i]);
             int j = 0;
             while (j < keywords.length) {
                 String word = MyString.lowerCase(keywords[j]);
-                if (sentences[i].indexOf(word) != -1) {
+                if (lowerSentences[i].indexOf(word) != -1) {
                     System.out.println(sentences[i]);
                     break;
                 }
